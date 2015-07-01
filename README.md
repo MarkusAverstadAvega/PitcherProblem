@@ -48,7 +48,8 @@ And on the step after that we would have to:
   - \[2 3] (This branch would go nowhere, but will be stopped next step by the logic above)
   - \[3 3]
   
-... And so on. Each branch would be stopped when it becomes meaningless or when it has hit its target volume.
+... And so on. Each branch would be stopped when it becomes meaningless or when it has hit its target volume. The
+application would then report the tree with the smallest number of steps to completion.
 
 **Delegate to services**
 Currently the main app has a lot of responsibility. I would delegate much of it to service classes, specifically all

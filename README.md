@@ -24,29 +24,29 @@ each step of the way.
 
 As such, given that we have two empty pitchers of 5 and 3 liters respectively we would have to create the following sets:
 - Filled large pitcher, empty small pitcher
-  - [5 0]
+  - \[5 0]
 - Filled small pitcher, empty large pitcher
-  - [0 3]
+  - \[0 3]
 
 At the next step we would have to:
 - Pour large pitcher into small pitcher
-  - [2 3]
+  - \[2 3]
 - Pour small pitcher into large pitcher
-  - [3 0]
+  - \[3 0]
   
 And on the step after that we would have to:
 - Empty the large pitcher
-  - [0 3]
-  - [0 0] (This branch stops here, because both pitchers are now empty)
+  - \[0 3]
+  - \[0 0] (This branch stops here, because both pitchers are now empty)
 - Empty the small pitcher
-  - [2 0]
-  - [3 0] (This branch stops here, because emptying an empty pitcher would be pointless)
+  - \[2 0]
+  - \[3 0] (This branch stops here, because emptying an empty pitcher would be pointless)
 - Fill the large pitcher
-  - [5 3]
-  - [5 0] (This branch stops here, because filling a partially filled bottle would stop our progress)
+  - \[5 3]
+  - \[5 0] (This branch stops here, because filling a partially filled bottle would stop our progress)
 - Fill the small pitcher
-  - [2 3] (This branch would go nowhere, but will be stopped next step by the logic above)
-  - [3 3]
+  - \[2 3] (This branch would go nowhere, but will be stopped next step by the logic above)
+  - \[3 3]
   
 ... And so on. Each branch would be stopped when it becomes meaningless or when it has hit its target volume.
 
